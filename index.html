@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html lang='en'>
+<head>
+	<style type='text/css'>
+		.tile {
+			display:inline-block;
+			width:30px;
+			height:30px;
+			background-color:pink;
+			border:1px solid gray;
+			float:left;
+		}
+		
+		#atmos_sim_container {
+			background-color:purple;
+			display:inline-block;
+		}
+		
+		.WALL {
+			background-color:lightgray!important;
+		}
+		
+		.FLOOR {
+			background-color:#00FF00;
+		}
+		
+		.SPACE {
+			background-color:black;
+		}
+		
+		.GEN {
+			background-color:blue!important;
+		}
+		
+		#context_menu {
+			background-color:beige;
+			width:130px;
+			font-family: arial;
+			border:1px solid gray;
+			position:fixed;
+			left:0px;
+			top:0px;
+			display:none;
+			cursor:pointer;
+		}
+		
+		#context_menu div {
+		   border-bottom:1px solid black;
+		   margin:2px;
+		   padding:2px;
+		}
+		
+		#context_menu div:hover {
+			background-color:orange;
+		}
+	</style>
+</head>
+<body>
+	<h1>Atmos simulator</h1>
+	<div id='atmos_sim_container'>
+	</div><br>
+	
+	<div id='context_menu'>
+		<div onclick="setTo('WALL');">WALL</div>
+		<div onclick="setTo('FLOOR');">FLOOR</div>
+		<div onclick="setTo('GEN');">OXYGEN</div>
+		<div onclick="setTo('SPACE');">SPACE</div>
+		<div onclick="cancelCtx();">CANCEL</div>
+	</div>
+	
+	<script type='text/javascript' src='run.js'>
+	</script>
+</body>
+</html>
